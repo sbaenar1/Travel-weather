@@ -12,24 +12,24 @@
         android:layout_width="382dp"
         android:layout_height="584dp"
         tools:context="co.edu.eafit.travelweather.MapsActivity"
-        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="-75dp" />
 
     <RelativeLayout
-        android:layout_width="365dp"
-        android:layout_height="84dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:layout_editor_absoluteX="3dp">
+        android:layout_width="359dp"
+        android:layout_height="119dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-3dp">
 
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:layout_alignBottom="@+id/editText"
+            android:layout_alignParentEnd="true"
+            android:text="Go"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="81dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true" />
+            tools:layout_editor_absoluteY="81dp" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/floatingActionButton"
@@ -40,20 +40,20 @@
             app:srcCompat="@android:drawable/ic_dialog_dialer"
             tools:layout_editor_absoluteX="12dp"
             tools:layout_editor_absoluteY="84dp"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="16dp"
-            android:layout_alignTop="@+id/button3" />
+            android:layout_alignBottom="@+id/editText"
+            android:layout_toStartOf="@+id/editText"
+            android:layout_marginEnd="12dp" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="183dp"
-            android:layout_height="37dp"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="5dp"
-            tools:layout_editor_absoluteY="88dp"
-            android:layout_centerVertical="true"
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Search"
+            android:layout_alignParentTop="true"
             android:layout_toStartOf="@+id/button3"
-            android:layout_marginEnd="18dp" />
+            android:layout_marginTop="40dp" />
 
     </RelativeLayout>
 
