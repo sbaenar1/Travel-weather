@@ -21,29 +21,6 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="-3dp">
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/editText"
-            android:layout_alignParentEnd="true"
-            android:text="Go"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="81dp" />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/floatingActionButton"
-            android:layout_width="43dp"
-            android:layout_height="43dp"
-            android:clickable="true"
-            app:fabSize="mini"
-            app:srcCompat="@android:drawable/ic_dialog_dialer"
-            tools:layout_editor_absoluteX="12dp"
-            tools:layout_editor_absoluteY="84dp"
-            android:layout_alignBottom="@+id/editText"
-            android:layout_toStartOf="@+id/editText"
-            android:layout_marginEnd="12dp" />
-
         <EditText
             android:id="@+id/editText"
             android:layout_width="wrap_content"
@@ -51,9 +28,8 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Search"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/button3"
-            android:layout_marginTop="40dp" />
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 
