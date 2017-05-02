@@ -14,10 +14,9 @@ import Util.Utils;
  */
 
 public class WeatherHttpClient {
-    public String getWeatherData(String place){
+    public String getWeatherData(String place) {
         HttpURLConnection connection = null;
         InputStream inputStream = null;
-
         try {
             connection = (HttpURLConnection) (new URL(Utils.BASE_URL + place)).openConnection();
             connection.setRequestMethod("GET");
@@ -40,6 +39,9 @@ public class WeatherHttpClient {
             return stringBuffer.toString();
         } catch (IOException e) {
             e.printStackTrace();
+        }finally{
+            try{inputStream.close();}catch(Throwable e){}
+            try{connection.disconnect();} catch (Throwable e){}
         }
         return null;
     }

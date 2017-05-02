@@ -25,12 +25,9 @@ public class JSONWeatherParser {
             place.setLat(Utils.getFloat("lat",coorObj));
             place.setLon(Utils.getFloat("lon",coorObj));
 
-
             JSONObject sysObj = Utils.getObject("sys", jsonObject);
             place.setCountry(Utils.getString("country",sysObj));
             place.setLastupdate(Utils.getInt("dt",jsonObject));
-            place.setSunrise(Utils.getInt("sunrise",sysObj));
-            place.setSunset(Utils.getInt("sunset",sysObj));
             place.setCity(Utils.getString("name",jsonObject));
             weather.place = place;
 
@@ -41,12 +38,10 @@ public class JSONWeatherParser {
             weather.currentCondition.setCondition(Utils.getString("main", jsonWeather));
             weather.currentCondition.setIcon(Utils.getString("icon",jsonWeather));
 
-            JSONObject winObj = Utils.getObject("win", jsonObject);
-            weather.wind.setSpeed(Utils.getFloat("speed", winObj));
-            weather.wind.setDeg(Utils.getFloat("deg",winObj));
-
-            JSONObject cloudObj = Utils.getObject("clouds",jsonObject);
-            weather.clouds.setPrecipitation(Utils.getInt("all", cloudObj));
+            JSONObject mainObj = Utils.getObject("main", jsonObject);
+            weather.currentCondition.setHumidity(Utils.getInt("humidity", mainObj));
+            weather.currentCondition.setPressure(Utils.getInt("pressure", mainObj));
+            weather.currentCondition.setTemperature(Utils.getDouble("temp", mainObj));
 
             return weather;
 
