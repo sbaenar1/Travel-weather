@@ -32,6 +32,7 @@
         android:id="@+id/tempText"
         android:text="12 Deg"
         android:textStyle="normal"
+        android:paddingLeft="80dp"
         android:textColor="#fff"
         android:layout_below="@+id/cityText"
         android:layout_centerHorizontal="true"
